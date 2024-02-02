@@ -1,1 +1,51 @@
-/*# sourceMappingURL=bio.css.map */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+@font-face {
+  font-family: "Avenir Next";
+  src: url("../../assets/Font/Alternative files/AvenirNextLTPro.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Avenir Next";
+  src: url("../../assets/Font/Alternative files/AvenirNextLTProDemi.ttf") format("truetype");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Avenir Next";
+  src: url("../../assets/Font/Alternative files/AvenirNextLTProBold.ttf") format("truetype");
+  font-weight: 700;
+}
+.header__logo {
+  background-color: #323232;
+  height: 2.55rem;
+  padding: 1rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__img {
+  height: 1.25rem;
+  width: 7.5rem;
+}
+
+.top--nav {
+  background-color: #AFAFAF;
+}
+.top--nav__items {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0;
+  height: 2.5rem;
+  width: auto;
+  padding-top: 0;
+}/*# sourceMappingURL=bio.css.map */
