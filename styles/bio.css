@@ -71,8 +71,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-right: 7rem;
-  margin-left: 2rem;
+  margin-right: 3rem;
+  margin-left: 0rem;
   font-size: 1rem;
   font-family: "Avenir Next";
 }

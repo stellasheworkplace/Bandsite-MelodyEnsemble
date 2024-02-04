@@ -11,7 +11,7 @@ body {
 .header {
     background-color: $color-primary-black;
     color: $color-primary-white;
-    width: 100%;
+    width:100%;
     height: 5rem;
 
 
@@ -37,8 +37,8 @@ body {
             list-style: none;
             color: $color-primary-white;
             @include flex-center-space-between;
-            margin-right: 7rem;
-            margin-left: 2rem;
+            margin-right: 3rem;
+            margin-left: 0rem;
             font-size: 1rem;
             font-family: "Avenir Next";
         }
