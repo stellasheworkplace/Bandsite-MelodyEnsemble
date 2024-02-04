@@ -1,37 +1,43 @@
 @use "./partials/global";
 @use "./partials/typography";
 @use "./partials/color" as *;
+@use "./partials/mixins" as *;
 
-.header{
-    &__logo{
-        background-color:$color-primary-black;
-        height: 2.55rem;
-        padding: 1rem 1rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
+
+.header {
+    background-color: $color-primary-black;
+    color: $color-primary-white;
+    width: 100%;
+
+    @include flex-center-space-between;
+    flex-direction: column;
+   
+    &__logo {
+        //background-color: $color-primary-black;
+        height: 20%;
     }
 
-    &__img{
-        height: 1.25rem;
-        width: 7.5rem;
-       
+    &__img {
+        height: 100%;
+        padding-left: 0.5rem;
+        padding-top: 1rem;
+    }
+
+    &__nav {
+       width:100%;
+
+        &__list {
+            list-style: none;
+            color: $color-primary-white;
+            @include flex-center-space-between;
+            margin-right: 5rem;
+            
+        }
     }
 }
 
-.top--nav{
-        background-color:$color-primary-silver;
-
-        &__items{
-            list-style: none;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 0;
-            height: 2.5rem;
-            width: auto;
-            padding-top: 0;
-            
-        }
+.link {
+    color: $color-primary-white;
+    text-decoration: none;
+    font-size: 1rem;
 }
