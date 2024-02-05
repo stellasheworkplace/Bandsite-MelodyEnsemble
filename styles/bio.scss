@@ -28,6 +28,11 @@ body {
         align-items: center;
     }
 
+    @include desktop{
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
     &__logo {
         //background-color: $color-primary-black;
         height: 20%;
@@ -40,6 +45,10 @@ body {
         //padding-top: 1rem;
         @include tablet {
             padding: $padding-before-headlines-desktop;
+        }
+
+        @include desktop{
+            padding: 7rem;
         }
     }
 
@@ -71,6 +80,10 @@ body {
                 justify-content: space-evenly;
                 align-items: center;
             }
+
+            @include desktop{
+                width: 15%;
+            }
         }
     }
 }
@@ -88,6 +101,10 @@ body {
         padding-left: 2.5rem;
         padding-right: 2.5rem;
         padding-bottom: 2rem;
+    }
+
+    @include desktop{
+        margin-right: 1rem;
     }
 
 
@@ -139,6 +156,11 @@ body {
            font-size: 4.5rem;
            padding: $padding-before-headlines-desktop;
         }
+
+        @include desktop{
+            font-size: 3rem;
+            padding: 7rem;
+        }
     }
 }
 
@@ -154,6 +176,11 @@ body {
             @include tablet {
                 padding: $padding-before-headlines-desktop $padding-after-headlines-desktop $padding-after-headlines-desktop $padding-after-headlines-desktop;
             }
+
+            @include desktop{
+                padding: 3rem 7rem 2rem 7rem;
+                font-size: 2rem;
+            }
         }
 
         &__img {
@@ -164,6 +191,11 @@ body {
             @include tablet {
                 padding: 0 6rem;
                 height: 55%;
+            }
+
+            @include desktop{
+                padding: 0rem 13rem;
+                height: 35rem;
             }
         }
 
@@ -177,6 +209,11 @@ body {
                 font-size: 1.5rem;
              }
 
+             @include desktop{
+                padding: 0 13rem;
+                width: 80%;
+            }
+
             font-weight: 600;
             font-family: "Avenir Next";
             
@@ -187,8 +224,7 @@ body {
 
             @include tablet{
                 font-size: 1.2rem;
-                
-             }
+            }
         }
 
         &__subhead {
@@ -201,6 +237,10 @@ body {
                 padding:$padding-after-headlines-desktop 6rem;
                 font-weight: 600;
              }
+
+             @include desktop{
+                padding: 3rem 13rem 2rem 13rem;
+            }
         }
 
         &__content {
@@ -212,6 +252,10 @@ body {
                 width: 100%;
                 height:fit-content;
              }
+
+             @include desktop{
+                padding: 0 7rem;
+            }
         }
 
         &__contents {
@@ -242,6 +286,10 @@ body {
         @include tablet{
             padding: 0 $padding-before-headlines-desktop;
         }
+
+        @include desktop{
+            padding: 0 7rem;
+        }
     }
 
     &__item {
@@ -253,7 +301,13 @@ body {
         @include tablet{
             flex-direction: row;
             padding: $padding-after-headlines-desktop;
+           
         }   
+
+        @include desktop{
+            padding: 0 7rem;
+            justify-content: space-evenly;
+        }
     }
 
     &__photo {
@@ -263,7 +317,11 @@ body {
         @include tablet{
             padding:0 1rem;
             max-width: 17rem;
+        }
 
+        @include desk{
+            max-width: 30rem;
+            padding: 0 5rem 2rem 0;
         }
     }
 }
@@ -281,8 +339,14 @@ body {
             width: 70%;
             padding-right: 10rem;
             // position: relative;
-            
         }
+
+        @include desktop{
+            width: 30%;
+            padding-right:7rem;
+        }
+
+
         &__title {
             &--head {
                 @extend .gallery__head;
@@ -294,8 +358,14 @@ body {
                     padding: 0 $padding-after-headlines-desktop;
                     font-size: 3rem;
                     font-weight: 500;
-                    position: relative;
+                   
                 }
+
+                @include desktop{
+                    padding: 0 7rem;
+                    font-size: 2rem;
+                }
+
             }
         }
 
@@ -310,6 +380,13 @@ body {
                 padding-left: 1rem;
                 width:30%;
             }
+
+            @include desktop{
+                padding: 0 16rem;
+                font-size: 1rem;
+            }
+
+
         }
     }
 
@@ -327,7 +404,7 @@ body {
         @include tablet{
             flex-direction: row;
             padding: 0 $padding-after-headlines-desktop;
-            //position: relative;
+            
         }
     }
 
@@ -348,11 +425,11 @@ body {
         padding: 0 1rem;
         padding-top: 3rem;
 
-        @include tablet{
-            position: absolute;
-            top:166rem;
-            right: 10px;
-        }
+        // @include tablet{
+        //     position: fixed;
+        //     top:2200px;
+        //     right: 10px;
+        // }
     }
 
     &__copyright {
