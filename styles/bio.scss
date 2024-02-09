@@ -32,23 +32,33 @@ body {
         flex-direction: row;
         justify-content: space-evenly;
         align-items: center;
+        padding-left: 5rem;
     }
     &__logo {
-        //background-color: $color-primary-black;
-        height: 20%;
+        height: 25%;
+        margin-top: 1.2rem;
+
+        @include tablet{
+            margin-top: 0;
+        }
+
+        @include desktop{
+            margin-top: 0;
+        }
     }
 
     &__img {
         height: 100%;
-        padding-right: 1rem;
+        //padding-right: 1rem;
 
-        //padding-top: 1rem;
         @include tablet {
-            padding: $padding-before-headlines-desktop;
+            padding: 0 $padding-before-headlines-desktop;
+           
         }
 
         @include desktop{
-            padding: 7rem;
+            padding-left: 0 3rem;
+            
         }
     }
 
@@ -74,7 +84,6 @@ body {
             @include tablet {
                 height: 8%;
                 width: 38%;
-                
                 margin-left: 0rem;
                 gap:1rem;
                 justify-content: space-evenly;
@@ -82,7 +91,10 @@ body {
             }
 
             @include desktop{
-                width: 15%;
+                width: 5%;
+                margin-left: 5rem;
+               
+               
             }
         }
     }
@@ -92,21 +104,15 @@ body {
     color: $color-primary-white;
     text-decoration: none;
     font-size: 1rem;
+    width:100%;
+
+    border-bottom: 2rem solid transparent;
     align-items: center;
+    
     padding-top: 2rem;
     padding-left: 1rem;
     padding-right: 5rem;
-
-    @include tablet {
-        padding-left: 2.5rem;
-        padding-right: 2.5rem;
-        padding-bottom: 2rem;
-    }
-
-    @include desktop{
-        margin-right: 1rem;
-    }
-
+    
 
     &:hover {
         border-bottom: 0.2rem solid $color-primary-white;
@@ -116,20 +122,22 @@ body {
         border-bottom: 0.2rem solid $color-primary-white;
         font-weight: 700;
     }
+
+    @include tablet {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+        padding-bottom: 2rem;
+    }
+
+    @include desktop{
+       // margin-right: 1rem;
+       padding-left: 0.1rem;
+       font-size: 0.8rem;
+    }
+
+
+   
 }
-
-// .hero{
-//     &__img{
-//         height: 20rem;
-//         width:100%;
-//         position: relative;
-//     }
-
-//     &__title{
-//         position: absolute;
-//         text-align: center;
-//     }
-// }
 
 .hero {
     height: 18rem;
@@ -319,7 +327,7 @@ body {
             max-width: 17rem;
         }
 
-        @include desk{
+        @include desktop{
             max-width: 30rem;
             padding: 0 5rem 2rem 0;
         }
@@ -330,8 +338,10 @@ body {
 .footer {
     background-color: $color-primary-black;
     color: $color-primary-white;
-    
-   
+   @include desktop{
+    padding:1rem 6rem;
+   }
+
     &__contact {
 
         @include tablet{
@@ -343,7 +353,8 @@ body {
 
         @include desktop{
             width: 30%;
-            padding-right:7rem;
+            padding-right:6rem;
+            font-weight: 600;
         }
 
 
@@ -362,8 +373,9 @@ body {
                 }
 
                 @include desktop{
-                    padding: 0 7rem;
+                    padding: 0 2rem;
                     font-size: 2rem;
+                    width: 180%;
                 }
 
             }
@@ -371,10 +383,11 @@ body {
 
         &__logo {
             @include flex-center-space-between;
-            gap: 1rem;
+            gap: 2rem;
             width: 45%;
             padding: 0 1rem;
             //padding-top: 0px;
+
 
             @include tablet{
                 padding-left: 1rem;
@@ -382,11 +395,10 @@ body {
             }
 
             @include desktop{
-                padding: 0 16rem;
-                font-size: 1rem;
+                width: 5%;
+                padding: 0 8rem;
+                
             }
-
-
         }
     }
 
@@ -397,7 +409,7 @@ body {
         flex-direction: column;
         align-items: start;
         padding: 0 1rem;
-        // letter-spacing: 0.1rem;
+        
         line-height: 1.5rem;
         margin-bottom: 0px;
 
@@ -425,20 +437,27 @@ body {
         padding: 0 1rem;
         padding-top: 3rem;
 
-        // @include tablet{
-        //     position: fixed;
-        //     top:2200px;
-        //     right: 10px;
-        // }
+        @include tablet{
+            position: absolute;
+            top:70%;
+            right: 1rem;
+        }
+
+        @include desktop{
+            position: absolute;
+            top:480%;
+            right: 10%;
+            
+        }
     }
 
     &__copyright {
-        padding: 1rem;
+        padding: 0 1rem;
         font-size: 0.8rem;
         font-weight: 300;
 
         @include tablet{
-        padding: 0 $padding-after-headlines-desktop;
+        padding: $padding-after-headlines-desktop;
         }
     }
 }
