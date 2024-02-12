@@ -1,7 +1,7 @@
-@use "./partials/global";
-@use "./partials/typography";
-@use "./partials/color" as *;
-@use "./partials/mixins" as *;
+@use "../styles/partials/global";
+@use "../styles/partials/typography";
+@use "../styles/partials/color" as *;
+@use "../styles/partials/mixins" as *;
 
 $padding-before-headlines-desktop: 3rem;
 $padding-after-headlines-desktop: 2.25rem;
@@ -178,8 +178,159 @@ body {
     }
 }
 
-.users{
-    @include flex-center-space-between;
-    flex-direction: column;
-    color:$color-primary-black;
+.footer {
+    background-color: $color-primary-black;
+    color: $color-primary-white;
+
+    @include desktop {
+        padding: 1rem 6rem;
+    }
+
+    &__contact {
+
+        @include tablet {
+            @include flex-center-space-between;
+            width: 70%;
+            padding-right: 10rem;
+            // position: relative;
+        }
+
+        @include desktop {
+            width: 30%;
+            padding-right: 6rem;
+            font-weight: 600;
+        }
+
+
+        &__title {
+            &--head {
+                font-weight: 600;
+                padding-left: 1rem;
+                padding-top: 1rem;
+                font-size: 2rem;
+                letter-spacing: 0.1rem;
+                //font-size: 6rem;
+                font-weight: 500;
+                gap: 0.3rem;
+
+                @include tablet {
+                    padding: 0 $padding-after-headlines-desktop;
+                    font-size: 3rem;
+                    font-weight: 500;
+
+                }
+
+                @include desktop {
+                    padding: 0 2rem;
+                    font-size: 2rem;
+                    width: 180%;
+                }
+
+            }
+        }
+
+        &__logo {
+            @include flex-center-space-between;
+            gap: 2rem;
+            width: 45%;
+            padding: 0 1rem;
+            //padding-top: 0px;
+
+
+            @include tablet {
+                padding-left: 1rem;
+                width: 30%;
+            }
+
+            @include desktop {
+                width: 5%;
+                padding: 0 8rem;
+
+            }
+        }
+    }
+
+    &__info {
+       // @extend .about__contents;
+       margin: 0;
+            padding: 2rem 1rem 1rem 1rem;
+            font-size: 1.3rem;
+            font-weight: 300;
+            font-family: "Avenir Next";
+
+        font-weight: 300;
+        @include flex-center-space-between;
+        flex-direction: column;
+        align-items: start;
+        padding: 0 1rem;
+
+        line-height: 1.5rem;
+        margin-bottom: 0px;
+
+        @include tablet {
+            flex-direction: row;
+            padding: 0 $padding-after-headlines-desktop;
+
+        }
+    }
+
+    &__content {
+        padding-top: 0.8rem;
+    }
+
+    &__title {
+        font-weight: 700;
+    }
+
+    &__address {
+        width: 100%;
+        padding-top: 1rem;
+    }
+
+    &__logo {
+        padding: 0 1rem;
+        padding-top: 3rem;
+
+        @include tablet {
+            position: absolute;
+            top: 70%;
+            right: 1rem;
+        }
+
+        @include desktop {
+            position: absolute;
+            top: 370%;
+            right: 1rem;
+
+        }
+    }
+
+    &__copyright {
+        padding: 0 1rem;
+        font-size: 0.8rem;
+        font-weight: 300;
+
+        @include tablet {
+            padding: $padding-after-headlines-desktop;
+        }
+    }
+}
+
+.footer__contact__logo--icons {
+    width: 28px;
+    height: 32px;
+}
+
+
+
+button{
+    background-color:$color-primary-black;
+    color: $color-primary-white;
+    border:none; 
+    border-radius:10px; 
+    padding:15px;
+    min-height:4rem; 
+    min-width: 100%;
+
+    font-size: 1.5rem;
 }

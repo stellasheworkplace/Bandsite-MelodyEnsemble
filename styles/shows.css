@@ -198,10 +198,147 @@ body {
   color: #FFFFFF;
 }
 
-.users {
+.footer {
+  background-color: #323232;
+  color: #FFFFFF;
+}
+@media (min-width: 1280px) {
+  .footer {
+    padding: 1rem 6rem;
+  }
+}
+@media (min-width: 768px) {
+  .footer__contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    padding-right: 10rem;
+  }
+}
+@media (min-width: 1280px) {
+  .footer__contact {
+    width: 30%;
+    padding-right: 6rem;
+    font-weight: 600;
+  }
+}
+.footer__contact__title--head {
+  font-weight: 600;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+  font-weight: 500;
+  gap: 0.3rem;
+}
+@media (min-width: 768px) {
+  .footer__contact__title--head {
+    padding: 0 2.25rem;
+    font-size: 3rem;
+    font-weight: 500;
+  }
+}
+@media (min-width: 1280px) {
+  .footer__contact__title--head {
+    padding: 0 2rem;
+    font-size: 2rem;
+    width: 180%;
+  }
+}
+.footer__contact__logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  width: 45%;
+  padding: 0 1rem;
+}
+@media (min-width: 768px) {
+  .footer__contact__logo {
+    padding-left: 1rem;
+    width: 30%;
+  }
+}
+@media (min-width: 1280px) {
+  .footer__contact__logo {
+    width: 5%;
+    padding: 0 8rem;
+  }
+}
+.footer__info {
+  margin: 0;
+  padding: 2rem 1rem 1rem 1rem;
+  font-size: 1.3rem;
+  font-weight: 300;
+  font-family: "Avenir Next";
+  font-weight: 300;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  color: #323232;
+  align-items: start;
+  padding: 0 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 0px;
+}
+@media (min-width: 768px) {
+  .footer__info {
+    flex-direction: row;
+    padding: 0 2.25rem;
+  }
+}
+.footer__content {
+  padding-top: 0.8rem;
+}
+.footer__title {
+  font-weight: 700;
+}
+.footer__address {
+  width: 100%;
+  padding-top: 1rem;
+}
+.footer__logo {
+  padding: 0 1rem;
+  padding-top: 3rem;
+}
+@media (min-width: 768px) {
+  .footer__logo {
+    position: absolute;
+    top: 70%;
+    right: 1rem;
+  }
+}
+@media (min-width: 1280px) {
+  .footer__logo {
+    position: absolute;
+    top: 370%;
+    right: 1rem;
+  }
+}
+.footer__copyright {
+  padding: 0 1rem;
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+@media (min-width: 768px) {
+  .footer__copyright {
+    padding: 2.25rem;
+  }
+}
+
+.footer__contact__logo--icons {
+  width: 28px;
+  height: 32px;
+}
+
+button {
+  background-color: #323232;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  min-height: 4rem;
+  min-width: 100%;
+  font-size: 1.5rem;
 }/*# sourceMappingURL=shows.css.map */
