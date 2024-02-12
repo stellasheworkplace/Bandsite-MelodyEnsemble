@@ -177,3 +177,9 @@ body {
         color: $color-primary-white;
     }
 }
+
+.users{
+    @include flex-center-space-between;
+    flex-direction: column;
+    color:$color-primary-black;
+}

@@ -196,4 +196,12 @@ body {
   width: 169%;
   font-size: 10px;
   color: #FFFFFF;
+}
+
+.users {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  color: #323232;
 }/*# sourceMappingURL=shows.css.map */

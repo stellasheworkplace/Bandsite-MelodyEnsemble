@@ -43,6 +43,13 @@ body {
   color: #323232;
 }
 
+.users {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
 .header {
   background-color: #323232;
   color: #FFFFFF;
