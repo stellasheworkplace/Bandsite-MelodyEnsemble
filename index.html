@@ -116,29 +116,30 @@
 
     <!-- comment -->
     <section>
-        <h1>Join the Conversation</h1>
+        <h1 class="commentinfo">Join the Conversation</h1>
 
         <form id="add-comment" class="comment">
             <!-- avatar -->
-                <div class="comment__avatar">
-                    <img class="comment__icon"  src="./assets/Images/Mohan-muruge.jpg" alt="avatar">
+            <div class="comment__avatar">
+                <img class="comment__icon" src="./assets/Images/Mohan-muruge.jpg" alt="avatar">
+            </div>
+
+            <div class="combo">
+                <div class="comment__name">
+                    <label for="user__name">NAME</label>
+                    <input placeholder="Enter your name" class="comment__input" id="user__name" type="text" name="name">
                 </div>
 
-                <div class="combo">
-                    <div class="comment__name">
-                            <label for="user__name">NAME</label>
-                            <input placeholder="Enter your name" class="comment__input" id="user__name" type="text" name="name">
-                    </div>
-            
-                    <div class="comment__content">
-                        <label for="user__comment">COMMENT</label>
-                        <input placeholder="Add a new comment" class="comment__inputer" id="use-__comment" type="text" name="comment">
-                    </div>
-
-
-                    <button type="submit">COMMENT</button>
-                    <p id="add-errors"></p>
+                <div class="comment__content">
+                    <label for="user__comment">COMMENT</label>
+                    <input placeholder="Add a new comment" class="comment__inputer" id="user__comment" type="text"
+                        name="comment">
                 </div>
+
+
+                <button type="submit">COMMENT</button>
+                <p id="add-errors"></p>
+            </div>
         </form>
     </section>
 
@@ -146,7 +147,7 @@
         <div class="users"></div>
     </section>
 
-    
+
     <!-- footer -->
     <footer class="footer">
         <div class="footer__contact">
