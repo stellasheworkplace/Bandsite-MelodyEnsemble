@@ -178,6 +178,67 @@ body {
     }
 }
 
+// show
+.show{
+    @include flex-center-space-between;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 1rem;
+    border-bottom: 1px solid $color-primary-silver;
+
+    &__date{
+
+        &-title{
+            color:grey;
+            font-size: medium;
+            font-weight: 600;
+        }
+
+        &-subtitle{
+            font-size:1.3rem;
+            font-weight: 600;
+            color: $color-primary-black;
+        }
+    }
+
+    &__venue{
+        &-title{
+            @extend .show__date-title;
+        }
+
+        &-subtitle{
+            @extend .show__date-subtitle;
+        }
+    }
+
+    &__location{
+        &-title{
+            @extend .show__date-title;
+        }
+        &-subtitle{
+            @extend .show__date-subtitle;
+        }
+    }
+
+}
+ 
+.click{
+    display: flex;
+    align-items: center;
+
+    color:$color-primary-white;
+    background-color: $color-primary-black;
+
+    border:none; 
+    border-radius:10px; 
+    padding-left:11rem;
+    height:3rem; 
+    width: 90%;
+    margin-bottom: 1rem;
+
+    font-size: 1.5rem;
+}
+
 .footer {
     background-color: $color-primary-black;
     color: $color-primary-white;

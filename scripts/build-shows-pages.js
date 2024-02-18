@@ -89,19 +89,25 @@ function displayShow(shows) {
 
   //show__location
   const showsLocation = document.createElement("div");
-  showsLocation.classList.add("show__ocation");
+  showsLocation.classList.add("show__location");
 
   const showsLocationTitle = document.createElement("h3");
-  showsLocationTitle.classList.add("show__ocation-title");
+  showsLocationTitle.classList.add("show__location-title");
   showsLocationTitle.innerText = "LOCATION";
 
   const showsLocationSubTitle = document.createElement("h2");
-  showsLocationSubTitle.classList.add("show__date-subtitle");
+  showsLocationSubTitle.classList.add("show__location-subtitle");
   showsLocationSubTitle.innerText = shows.location;
+
+  const button = document.createElement("button");
+  button.classList.add("click")
+  button.textContent = 'BUY TICKETS';
+  document.body.appendChild(button);
 
   showsEL.appendChild(showsDate);
   showsEL.appendChild(showsVenue);
   showsEL.appendChild(showsLocation);
+  showsEL.appendChild(button);
 
   showsDate.appendChild(showsTitle);
   showsDate.appendChild(showsSubTitle);
