@@ -1,5 +1,5 @@
-  import BandSiteApi from "./band-site-api.js";
-  const bandSiteApi = new BandSiteApi("31d9bc99-8ea4-494d-9bb8-edd3eef3945c");
+import BandSiteApi from "./band-site-api.js";
+const bandSiteApi = new BandSiteApi("31d9bc99-8ea4-494d-9bb8-edd3eef3945c");
 
 // Sample array of information
 const shows = [
@@ -35,16 +35,17 @@ const shows = [
     venue: "Press Club",
     location: "San Francisco, CA"
   }
-  
+
 ];
 
 let commentEL = document.querySelector("#showTime");
 
-for(let i = 0; i < shows.length; i++){
-  const show = shows[i];
 
-  displayShow(show);
-}
+  for (let i = 0; i < shows.length; i++) {
+    const show = shows[i];
+
+    displayShow(show);
+  }
 
 /*<article "show">
 
@@ -125,4 +126,64 @@ function displayShow(shows) {
   showsLocation.appendChild(showsLocationSubTitle);
 
   commentEL.appendChild(showsEL);
-} 
+}
+
+/////
+//Below is my code for spirnt-3
+//Still need to fix cause the get data is not working
+/////
+
+// let commentEL = document.querySelector("#showTime");
+// let showsInfo = "";
+
+// async function getShows() {
+//   const shows = await bandSiteApi.getShows();
+
+//   commentEl.textContent = "";
+
+//   shows.forEach((show) => {
+//     let commentItemEl = document.createElement("li");
+//     commentItemEl.classList.add("show__item");
+//     commentListEl.appendChild(commentItemEl);
+
+//     let commentContainerEl = document.createElement("div");
+//     commentContainerEl.classList.add("show__container");
+//     commentItemEl.appendChild(commentContainerEl);
+
+//     let dateEl = document.createElement("label").classList.add("date__details").innerText = "DATE";
+//     commentContainerEl.appendChild(dateEl);
+
+//     let dateDetailEl = document.createElement("p");
+//     dateDetailEl.classList.add("date__details");
+//     let options = { weekday: 'long', year: 'numeric', month: 'short', day: 'numeric' };
+//     dateDetailEl.innerText = new Date (show.date).toLocaleDateString("en-US", options);
+//     commentContainerEl.appendChild(dateDetailEl);
+
+//     let venueLabelEl = document.createElement("label");
+//     venueLabelEl.classList.add("date__details--color");
+//     venueLabelEl.innerText = "VENUE";
+//     commentContainerEl.appendChild(venueLabelEl);
+
+//     let venueDetailEl = document.createElement("p");
+//     venueDetailEl.classList.add("date__details");
+//     venueDetailEl.innerText = show.place;
+//     commentContainerEl.appendChild(venueDetailEl);
+
+//     let locationLabelEl = document.createElement("label");
+//     locationLabelEl.classList.add("date__details--color");
+//     locationLabelEl.innerText = "LOCATION";
+//     commentContainerEl.appendChild(locationLabelEl);
+
+//     let locationDetailEl = document.createElement("p");
+//     locationDetailEl.classList.add("date__details");
+//     locationDetailEl.innerText = show.location;
+//     commentContainerEl.appendChild(locationDetailEl);
+
+//     let buttonEl = document.createElement("button");
+//     buttonEl.classList.add("comment__button");
+//     buttonEl.innerText = "BUY TICKETS";
+//     commentItemEl.appendChild(buttonEl);
+
+//   });
+// }
+//   getShows();

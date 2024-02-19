@@ -519,6 +519,7 @@ button {
 @media (min-width: 1280px) {
   .user {
     width: 50%;
+    margin-left: 10rem;
   }
 }
 .user__avatar {
