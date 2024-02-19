@@ -1,3 +1,6 @@
+ import BandSiteApi from "./band-site-api.js";
+ const bandSiteApi = new BandSiteApi("31d9bc99-8ea4-494d-9bb8-edd3eef3945c");
+
 const users = [
     {
         image: "/",

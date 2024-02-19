@@ -1,3 +1,5 @@
+  import BandSiteApi from "./band-site-api.js";
+  const bandSiteApi = new BandSiteApi("31d9bc99-8ea4-494d-9bb8-edd3eef3945c");
 
 // Sample array of information
 const shows = [
@@ -17,22 +19,26 @@ const shows = [
     date: "Sat Oct 12 2024",
     venue: "View Lounge",
     location: "San Francisco, CA"
+  },
+  {
+    date: "Sat Nov 16 2024",
+    venue: "Hyatt Agency",
+    location: "San Francisco, CA"
+  },
+  {
+    date: "Fri Nov 29 2024",
+    venue: "Moscow Center",
+    location: "San Francisco, CA"
+  },
+  {
+    date: "Web Dec 18 2024",
+    venue: "Press Club",
+    location: "San Francisco, CA"
   }
+  
 ];
 
-// const showEL = document.querySelectorAll(".show");
-
-//showAll(shows);
-
-//function showAll(shows) {
-  // showEL.innerHTML = "";
-
-  // for (let i = 0; i < shows.length; i++) {
-  //   const show = shows[i];
-
-  //   console.log(displayShow(show));
-  // }
-//}
+let commentEL = document.querySelector("#showTime");
 
 for(let i = 0; i < shows.length; i++){
   const show = shows[i];
@@ -118,5 +124,5 @@ function displayShow(shows) {
   showsLocation.appendChild(showsLocationTitle);
   showsLocation.appendChild(showsLocationSubTitle);
 
-  document.querySelector("#showTime").appendChild(showsEL);
-}
+  commentEL.appendChild(showsEL);
+} 
